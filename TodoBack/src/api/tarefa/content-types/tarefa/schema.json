@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarefas",
+  "info": {
+    "singularName": "tarefa",
+    "pluralName": "tarefas",
+    "displayName": "Tarefa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "descricao": {
+      "type": "string",
+      "required": true
+    },
+    "prazo": {
+      "type": "date"
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "tarefas"
+    },
+    "dono": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "tarefas"
+    },
+    "concluida": {
+      "type": "boolean",
+      "default": false
+    },
+    "arquivada": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
