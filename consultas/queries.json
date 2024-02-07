@@ -1,0 +1,119 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Todo FGV",
+    "dateExported": "2024-02-07T19:41:02.638Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9e6612d1-1ea0-4aae-bb4d-b5a775cd4d0d",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Recuperar todas as tarefas concluídas",
+            "url": "http://localhost:1337/api/tarefas?populate=category&filters[concluida][$eq]=true",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-06T18:27:31.050Z",
+            "modified": "2024-02-06T18:30:12.862Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "populate",
+                    "value": "category",
+                    "isPath": false
+                },
+                {
+                    "name": "filters[concluida][$eq]",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "60c585c8-257e-4329-9519-937e9c34c073",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Recuperar todas as tarefas",
+            "url": "http://localhost:1337/api/tarefas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-06T18:27:31.051Z",
+            "modified": "2024-02-06T18:30:36.390Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a92bc937-3f27-4b4a-aba6-f8e55c10d135",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Criar uma nova tarefa",
+            "url": "http://localhost:1337/api/tarefas",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-06T18:27:31.052Z",
+            "modified": "2024-02-06T18:32:35.533Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"descricao\": \"Entregar projeto final\",\n    \"prazo\": \"2050-12-12\",\n    \"categoria\": 1,\n    \"concluida\": false,\n    \"arquivada\": false\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "420ce5dc-f0f9-4dde-81e6-a24f71fe70d3",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Atualizar uma tarefa",
+            "url": "http://localhost:1337/api/tarefas/9",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2024-02-06T18:33:34.974Z",
+            "modified": "2024-02-06T18:34:34.896Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"descricao\": \"Entregar projeto final\",\n    \"prazo\": \"2050-12-12\",\n    \"categoria\": 1,\n    \"concluida\": true,\n    \"arquivada\": true\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d20c99b-5574-4b03-9dbe-2c03eb3ba6b6",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Deletar uma tarefa",
+            "url": "http://localhost:1337/api/tarefas/4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-06T18:27:31.053Z",
+            "modified": "2024-02-06T18:33:11.031Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "78bd1a1e-3e71-4734-ac49-2014900145c5",
+            "colId": "f06ff413-0e9c-4517-9a7b-be9692032945",
+            "containerId": "",
+            "name": "Autenticação",
+            "url": "http://localhost:1337/api/auth/local",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-02-06T18:27:31.054Z",
+            "modified": "2024-02-06T18:27:31.054Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"identifier\": \"admin@mail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
